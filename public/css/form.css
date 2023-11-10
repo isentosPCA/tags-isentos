@@ -1,0 +1,98 @@
+/* Estilos para tornar o formulário mais atraente */
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    margin-top: 20px;
+}
+
+#titulo {
+    text-align: center;
+    font-size: 36px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+button {
+    background-color: #D20000;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #910000;
+}
+
+.campo {
+    margin-bottom: 20px;
+}
+
+.campo label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.campo input[type="text"],
+.campo input[type="date"],
+.campo select,
+.campo textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    color: #333;
+}
+
+.campo textarea {
+    height: 100px;
+}
+
+/* Estilos para os botões de rádio */
+.buttonRadio {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+/* Estilos para os botões de envio do formulário */
+.botao {
+    margin-top: 20px;
+}
+
+/* Estilos para o botão "Sair" */
+#sair {
+    display: block;
+    text-align: center;
+    margin-top: 20px;
+    font-size: 16px;
+    color: #D20000;
+    text-decoration: none;
+}
+
+#sair:hover {
+    text-decoration: underline;
+}
+
+.btn-csv{
+
+    background-color: #D20000;
+    border:red;
+}
+ .exit{
+    margin-top: 10px;
+    margin-left: 5px;
+    
+ }
+
+ #myButton {
+    color: #fff;
+}
+

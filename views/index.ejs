@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Informações TAGs</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+
+    <!--CSS-->
+
+    <link rel="stylesheet" href="/css/index.css">
+
+    <!--JS-->
+
+    <script src="/frontJS/front.js"></script>
+    <script src="https://cdn.rawgit.com/davidshimjs/qrcodejs/gh-pages/qrcode.min.js"></script>
+    <script src="https://rawgit.com/schmich/instascan-builds/master/instascan.min.js"></script>
+
+    <!--Fonte do Google-->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@200&display=swap" rel="stylesheet">
+    
+    <!-- Favicon -->
+
+    <link rel="icon" href="https://aemassets.grupoccr.com.br/content/dam/sites-modulares/pt/media/images/icones/ccr.ico" type="image/x-icon">
+
+</head>
+<body>
+
+    <div class="centered-container">
+        <img id="logo" src="/images/logo2-icon.png" alt="Seu Logo">
+        <br>
+        <h1>Olá, seja bem vindo!</h1>
+        <br>
+        <h1>Informe o código recebido para obter os dados da sua solicitação de TAG</h1>
+    </div>
+
+    <form action="/home" method="GET" class="search">
+
+    <div class="input_position">
+
+      <input type="radio" name="buttonRadio" value="1" id="bt-radio-individual" class="radioStyle" onclick="checarBt('individual')"><span class="spanRadio">Pesquisa de veículo individual</span>
+    <br>
+      <input type="radio" name="buttonRadio" value="2" id="bt-radio-lote" class="radioStyle" onclick="checarBt('lote')"><span class="spanRadio">Pesquisa em lote</span>
+
+
+      <div> 
+        <input type="text" name="hashcode" id="hashcode" placeholder="Informe o código recebido aqui" class="inputHash">
+        <button type="submit" class="search-button"></button>
+      </div>
+        
+      <div>
+        
+        <input type="text" name="subhash" id="subhash" placeholder="Informe o código recebido aqui" class="inputHash">
+        <button type="submit" class="search-button"></button>
+      </div>
+        
+
+    </div>
+
+    </form>
+
+
+    <% if (typeof nenhumResultado !== 'undefined' && nenhumResultado) { %>
+        <script>alert('Nenhum resultado encontrado.');</script>
+    <% } %>
+
+
+
+    <div class="centered-container2">
+
+        <h1 id="frase">CCR \ VIVA SEU CAMINHO<span class="pontos"></span><i class="fas fa-car-side"></i></h1>
+        <div class="links">
+          <ul>
+            <li><a href="https://www.grupoccr.com.br/" target="_blank" title="Site"><img src="/images/icons/local-na-rede-internet.png" alt="Ícone do Site"></a></li>
+            <li><a href="https://m.facebook.com/GrupoCCROficial/?locale=nl_NL&_rdr" target="_blank" title="Facebook"><img src="/images/icons/facebook.png" alt="Ícone do Facebook"></a></li>
+            <li><a href="https://www.instagram.com/grupoccroficial/" target="_blank" title="Instagram"><img src="/images/icons/instagram.png" alt="Ícone do Instagram"></a></li>
+            <li><a href="https://br.linkedin.com/company/grupoccroficial" target="_blank" title="Linkedin"><img src="/images/icons/logotipo-do-linkedin.png" alt="Ícone do Linkedin"></a></li>
+          </ul>
+        </div>
+      </div>
+
+
+</body>
+</html>
+
+

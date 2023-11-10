@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/css/login.css">
+  <script src="/frontJS/front.js"></script>
+
+  <title>login</title>
+</head>
+<body>
+  <div class="container right-panel-active">
+	<!-- Sign Up -->
+	<div class="container__form container--signup">
+		<form action="/login/register" method="POST" class="form" id="form1">
+			<h2 class="form__title">Registrar</h2>
+      <input type="text" placeholder="Matrícula" name="matriculaRegistro" class="input" />
+      <input type="password" placeholder="Senha" name="passwordRegistro" class="input" />
+      <input type="password" placeholder="Token" name="tokenConfirm" class="input" />
+
+			<button type="submit" class="btn">Registrar-se</button>
+		</form>
+	</div>
+
+	<!-- Sign In -->
+	<div class="container__form container--signin">
+		<form action="/login/acess" method="POST" class="form" id="form2">
+			<h2 class="form__title">Entrar</h2>
+			<input type="text" placeholder="Matrícula" name="matriculaLogin" class="input" />
+      <input type="password" placeholder="Senha" name="passwordLogin" class="input" />
+
+			<button type="submit" class="btn">Entrar</button>
+		</form>
+	</div>
+
+	<!-- Overlay -->
+	<div class="container__overlay">
+		<div class="overlay">
+			<div class="overlay__panel overlay--left">
+				<button class="btn" id="signIn">Entrar</button>
+			</div>
+			<div class="overlay__panel overlay--right">
+				<button class="btn" id="signUp">Registrar-se</button>
+			</div>
+		</div>
+	</div>
+</div>
+</body>
+</html>

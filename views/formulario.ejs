@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+	<!-- Metadados -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<!-- CSS -->
+	<link rel="stylesheet" href="/css/form.css" media="screen">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+	<script src="/frontJS/front.js"></script>
+	<!-- Título da página (aparece na aba) -->
+	<title>Cadastro de TAG</title>
+	<script>
+		// Função para formatar a data de DD-MM-AAAA para AAAA-MM-DD
+		function formatarData() {
+		    var input = document.getElementById('data_vigencia');
+		    var data = input.value;
+		
+		    // Verifique se a data está no formato DD-MM-AAAA
+		    var partes = data.split('-');
+		    if (partes.length === 3) {
+		        var dia = partes[0];
+		        var mes = partes[1];
+		        var ano = partes[2];
+		
+		        // Crie a data formatada AAAA-MM-DD
+		        var dataFormatada = ano + '-' + mes + '-' + dia;
+		
+		        // Defina o valor do campo de data para a data formatada
+		        input.value = dataFormatada;
+		    }
+		}
+		
+		// Adicione um ouvinte de evento para chamar a função quando o campo de data perder o foco
+		document.getElementById('data_vigencia').addEventListener('blur', formatarData);
+		
+	</script>
+</head>
+
+<body>
+	<div class="container">
+		<div>
+			<h1 id="titulo">Cadastro de status</h1>
+			<form action="/form" method="POST" id="meuFormulario">
+				<fieldset id="buttonRadio">
+					<input class="buttonRadio" type="radio" id="buttonInsert" name="buttonRadio" value="1" onclick="checar()"> Inserir novo registro <br>
+					<input class="buttonRadio" type="radio" id="buttonUpdate" name="buttonRadio" value="2" onclick="checar()"> Atualizar status da TAG
+				</fieldset>
+		</div>
+		<!-- Container principal -->
+		<div class="container">
+			<!-- Início do formulário -->
+			<fieldset class="grupo">
+				<!-- Campo do nome com legenda "nome" e css de classe "campo" -->
+				<div class="campo">
+					<label for="placa"><strong>Placa</strong></label>
+					<input type="text" name="placa" id="placa" required placeholder="Insira a placa do veículo" oninput="this.value = this.value.toUpperCase()" maxlength="7">
+				</div>
+				<!-- Campo do sobrenome com legenda "sobrenome" e css de classe "campo" -->
+				<div class="campo">
+					<label for="orgao"><strong>Órgão</strong></label>
+					<input type="text" name="orgao" id="orgao" required placeholder="Insira o órgão solicitante" oninput="this.value = this.value.toUpperCase()">
+				</div>
+				<div class="campo">
+					<label for="data_vigencia"><strong>Data de vigência</strong></label>
+					<input type="date" name="data_vigencia" id="data_vigencia" required>
+				</div>
+				<div class="campo">
+					<label for="tag"><strong>Nº da TAG</strong></label>
+					<input type="text" name="tag" id="tag" required placeholder="Insira o número da TAG" oninput="this.value = this.value.toUpperCase()">
+				</div>
+				<div class="campo">
+					<label for="hashcode"><strong>Hashcode</strong></label>
+					<input type="text" name="hash" id="hash" required placeholder="Insira o Hashcode da placa" oninput="this.value = this.value.toUpperCase()">
+				</div>
+			</fieldset>
+			<br>
+			<!-- Caixa de texto -->
+			<div class="campo">
+				<br>
+				<label for="status"><strong>Status atual da TAG:</strong></label>
+				<textarea rows="6" style="width: 26em" id="status" name="status" oninput="this.value = this.value.toUpperCase()" placeholder="Informe a situação atual da TAG"></textarea>
+			</div>
+			<!-- Botão para enviar o formulário -->
+			<button class="botao" type="submit" onsubmit="">Enviar</button>
+			</form>
+			<div class="container">
+				<h2 class="mb-3"><span id="boot">Importação em lote</span></h2>
+				<form action="/upload-csv" method="POST" enctype="multipart/form-data">
+					<input class="buttonRadio-lote" type="radio" id="buttonInsert" name="buttonRadio" value="1" onclick="checar()"> Inserir novo registro <br>
+					<input class="buttonRadio-lote" type="radio" id="buttonUpdate" name="buttonRadio" value="2" onclick="checar()"> Atualizar status da TAG <div class="mb-3">
+						<input type="file" class="form-control" name="importar-lote" accept=".csv">
+					</div>
+					<div class="d-grid">
+						<input type="submit" id="myButton" class="btn-csv" value="Enviar Arquivo CSV"></input>
+					</div>
+				</form>
+				<div>
+				</div>
+			</div>
+		</div>
+		<div class="exit">
+			<a href="/logout">SAIR</a>
+		</div>
+</body>
+
+</html>

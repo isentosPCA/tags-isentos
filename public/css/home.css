@@ -1,0 +1,163 @@
+body {
+  max-width: 90%;
+  margin: 0 auto;
+  padding: 2%;
+  background-color: white;
+}
+
+/* CSS para telas maiores */
+@media (min-width: 769px) {
+  #frase h1 {
+    font-size: 40px; /* Tamanho da fonte para telas maiores */
+  }
+
+}
+
+/* CSS para telas menores (smartphones) */
+@media (max-width: 768px) {
+
+
+  #frase h1 {
+    font-size: 24px; /* Tamanho da fonte para telas menores */
+  }
+
+ 
+}
+
+.centered-container {
+  display: flex;
+  flex-direction: column; /* Colocar os elementos em uma coluna */
+  align-items: center; /* Alinhar horizontalmente no centro */
+  text-align: center; /* Centralizar o texto */
+  margin-top: 2%; /* Ajuste conforme necessário */
+}
+
+#logo {
+  width: 15%; /* Defina o valor desejado, como 50% para metade do tamanho atual */
+  height: auto;
+  margin-top: -100; /* Ajuste conforme necessário para espaço entre a imagem e o texto */
+}
+
+h1 {
+  color: black;
+  font-family: "Avant Garde", Avantgarde, "Century Gothic", CenturyGothic, "AppleGothic", sans-serif;
+  text-rendering: optimizeLegibility;
+  font-size: 40px;
+  margin-top: 5px; /* Ajuste conforme necessário para espaço entre o texto e outros elementos */
+}
+
+
+/* CSS para as informações */
+#infos {
+  margin-top: 5%;
+  background-color: #fff; /* Fundo branco */
+  border-radius: 5px; /* Cantos arredondados */
+  padding: 20px; /* Espaçamento interno */
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.6); /* Sombra mais destacada */
+  text-align: left; /* Alinhamento à esquerda */
+  border: 1px solid #ccc; /* Adicione uma borda para destacar */
+}
+
+.info-item {
+  font-family: 'Mukta', sans-serif;
+  text-rendering: optimizeLegibility;
+  font-size: 24px;
+  margin: 10px 0;
+}
+
+.info-label {
+  font-weight: bold;
+  color: #333; /* Cor do rótulo */
+}
+
+.info-value {
+  color: #666; /* Cor do valor */
+}
+
+#newSearchContainer {
+  background-color: #D20000; /* Cor de fundo */
+  border: none;
+  border-radius: 5px; /* Cantos arredondados */
+  padding: 10px 20px; /* Espaçamento interno */
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 20px; /* Tamanho da fonte */
+  color: white; /* Cor do texto */
+  cursor: pointer;
+  margin-top: 25px;
+  transition: background-color 0.3s ease; /* Efeito de transição suave na cor de fundo */
+}
+
+#newSearchContainer:hover {
+  background-color: #900000; /* Cor de fundo ao passar o mouse */
+}
+
+#newSearch {
+  text-decoration: none;
+  color: white;
+}
+
+#newSearch:hover {
+  text-decoration: underline; /* Sublinhar o texto ao passar o mouse */
+}
+
+
+.centered-container2 {
+  display: flex;
+  flex-direction: column; /* Colocar os elementos em uma coluna */
+  align-items: center; /* Alinhar horizontalmente no centro */
+  text-align: center; /* Centralizar o texto */
+  margin-top: 5%; /* Ajuste conforme necessário */
+}
+
+#frase {
+  margin-bottom: 10px;
+  font-size: 40px;
+}
+
+.links {
+  margin-top: 10px; /* Adicione um espaçamento entre a frase e os botões */
+}
+
+.links ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.links li {
+  margin: 0 10px;
+}
+
+.links a {
+  color: white;
+  font-size: 24px;
+  text-decoration: none;
+  /* Defina o efeito de escala (zoom) ao passar o mouse */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: inline-block;
+  outline: none; /* Remove o contorno ao redor dos ícones */
+  border: none; /* Remove a borda ao redor dos ícones */
+}
+
+/* Estilo dos ícones de redes sociais */
+.links img {
+  /* Ajuste o tamanho dos ícones conforme necessário */
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #fff;
+  padding: 5px;
+  box-sizing: content-box;
+}
+
+.links a:hover {
+  transform: scale(1.2); /* Aumenta o tamanho do ícone em 20% ao passar o mouse */
+}
+
+.links a:hover img {
+  background-color: #f8f8f8;
+}

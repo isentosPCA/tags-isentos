@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-BR"><head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Informações TAGs</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel="stylesheet" href="/css/home.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    
+    <!--JS-->
+
+    <script src="/frontJS/front.js"></script>
+
+    <!--Fonte do Google-->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@200&display=swap" rel="stylesheet">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Mukta&display=swap" rel="stylesheet">
+
+<!-- Favicon -->
+
+    <link rel="icon" href="https://aemassets.grupoccr.com.br/content/dam/sites-modulares/pt/media/images/icones/ccr.ico" type="image/x-icon">
+
+</head>
+<body>
+    <div class="centered-container">
+
+        <img id="logo" src="/images/logo2-icon.png" alt="Seu Logo">
+        <br>
+        <br>
+        <br>
+        <h1 id="divMenor">Abaixo você encontra informações sobre o status da sua TAG!</h1>
+
+    </div>
+  
+
+    <div id="infos">
+        <p class="info-item"><span class="info-label">Placa:</span> <span class="info-value"><%= informacoes.placa %></span></p>
+        <p class="info-item"><span class="info-label">Órgão:</span> <span class="info-value"><%= informacoes.orgao %></span></p>
+        <p class="info-item"><span class="info-label">N° da TAG:</span> <span class="info-value"><%= informacoes.n_tag %></span></p>
+        <p class="info-item"><span class="info-label">Data de vigência:</span> <span class="info-value"><%= informacoes.data_formatada %></span></p>
+        <p class="info-item"><span class="info-label">Situação:</span> <span class="info-value"><%= informacoes.status %></span></p>
+        <div>
+            <img src="<%= decodedQrDataURL %>" alt="QR Code">
+        </div>
+    </div>
+    
+
+    <button id="newSearchContainer">
+        <a href="/index" id="newSearch">Nova Busca</a>
+    </button>
+
+    <div class="centered-container2">
+        <h1 id="frase">CCR \ VIVA SEU CAMINHO<span class="pontos"></span><i class="fas fa-car-side"></i></h1>
+        <div class="links">
+          <ul>
+            <li><a href="https://www.grupoccr.com.br/" target="_blank" title="Site"><img src="/images/icons/local-na-rede-internet.png" alt="Ícone do Site"></a></li>
+            <li><a href="https://m.facebook.com/GrupoCCROficial/?locale=nl_NL&_rdr" target="_blank" title="Facebook"><img src="/images/icons/facebook.png" alt="Ícone do Facebook"></a></li>
+            <li><a href="https://www.instagram.com/grupoccroficial/" target="_blank" title="Instagram"><img src="/images/icons/instagram.png" alt="Ícone do Instagram"></a></li>
+            <li><a href="https://br.linkedin.com/company/grupoccroficial" target="_blank" title="Linkedin"><img src="/images/icons/logotipo-do-linkedin.png" alt="Ícone do Linkedin"></a></li>
+          </ul>
+        </div>
+    </div>
+    
+    
+</body>
+</html>
